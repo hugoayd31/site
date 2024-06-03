@@ -41,5 +41,7 @@ public class SiteService {
     public List<Site> findByLocation(String location) {
         return siteRepository.findByInfoGeographique(location);
     }
+    public List<SiteProjection> findAllProjected() {
+        return siteRepository.findAllProjectedBy();
+    }
 }
-

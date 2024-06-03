@@ -48,13 +48,7 @@ public class SeSitueAController {
         seSitueAService.deleteById(id);
     }
 
-    @GetMapping("/startSite/{nomSite}")
-    public List<SeSitueA> getSeSitueAByStartSiteNomSite(@PathVariable String nomSite) {
-        return seSitueAService.findByStartSiteNomSite(nomSite);
-    }
 
-    @GetMapping("/endSite/{nomSite}")
-    public List<SeSitueA> getSeSitueAByEndSiteNomSite(@PathVariable String nomSite) {
-        return seSitueAService.findByEndSiteNomSite(nomSite);
-    }
+
+
 }

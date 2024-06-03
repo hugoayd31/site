@@ -31,4 +31,3 @@ public class Site {
     private List<SeSitueA> seSitueAIncoming;
 
 }
-

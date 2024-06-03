@@ -54,5 +54,10 @@ public class SiteController {
     public List<Site> getSitesByLocation(@PathVariable String location) {
         return siteService.findByLocation(location);
     }
-}
 
+    // Nouvelle méthode GET pour récupérer les sites sans seSitueAOutgoing
+    @GetMapping("/synthese")
+    public List<SiteProjection> getAllSitesWithoutOutgoing() {
+        return siteService.findAllProjected();
+    }
+}

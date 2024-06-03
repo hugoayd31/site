@@ -1,7 +1,5 @@
 package com.example.testneo4j;
 
-import com.example.testneo4j.SeSitueA;
-import com.example.testneo4j.SeSitueARepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,11 +27,5 @@ public class SeSitueAService {
         seSitueARepository.deleteById(id);
     }
 
-    public List<SeSitueA> findByStartSiteNomSite(String nomSite) {
-        return seSitueARepository.findByStartSiteNomSite(nomSite);
-    }
 
-    public List<SeSitueA> findByEndSiteNomSite(String nomSite) {
-        return seSitueARepository.findByEndSiteNomSite(nomSite);
-    }
 }
