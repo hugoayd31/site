@@ -36,8 +36,6 @@ public class SeSitueAController {
             seSitueA.setDistance(updatedSeSitueA.getDistance());
             seSitueA.setTmpsTrajetVoiture(updatedSeSitueA.getTmpsTrajetVoiture());
             seSitueA.setTmpsTrajetTransport(updatedSeSitueA.getTmpsTrajetTransport());
-           /* seSitueA.setStartSite(updatedSeSitueA.getStartSite());
-            seSitueA.setEndSite(updatedSeSitueA.getEndSite());*/
             return seSitueAService.save(seSitueA);
         }
         return null;

@@ -1,8 +1,8 @@
 package com.example.testneo4j;
 
-//import jakarta.persistence.*;
+
 import com.example.testneo4j.SeSitueA;
-//import com.example.demooo.entity.accEntity.Accueil;
+
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.neo4j.core.schema.GeneratedValue;
