@@ -1,5 +1,6 @@
 package com.example.testneo4j;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.neo4j.core.schema.*;
@@ -23,7 +24,7 @@ public class SeSitueA {
     @Property(name = "tmpsTrajetTransport")
     private Double tmpsTrajetTransport;
 
-
+    @JsonBackReference
     @TargetNode
     private Site endSite;
 

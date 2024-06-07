@@ -60,7 +60,7 @@
             <artifactId>spring-data-jpa</artifactId>
             <version>3.3.0</version>
         </dependency>
-        <!-- Optional: If you need the aspect-oriented programming support -->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>

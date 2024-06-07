@@ -13,12 +13,12 @@ public class SiteController {
     @Autowired
     private SiteService siteService;
 
-    @GetMapping
+    @GetMapping("getall")
     public List<Site> getAllSites() {
         return siteService.findAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("site/{id}")
     public Site getSiteById(@PathVariable Long id) {
         return siteService.findById(id);
     }
@@ -28,7 +28,7 @@ public class SiteController {
         return siteService.save(site);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("update/{id}")
     public Site updateSite(@PathVariable Long id, @RequestBody Site updatedSite) {
         Site site = siteService.findById(id);
         if (site != null) {
@@ -39,7 +39,7 @@ public class SiteController {
         return null;
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("delete/{id}")
     public void deleteSite(@PathVariable Long id) {
         siteService.deleteById(id);
     }

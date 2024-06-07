@@ -14,12 +14,12 @@ public class SeSitueAController {
     @Autowired
     private SeSitueAService seSitueAService;
 
-    @GetMapping
+    @GetMapping("getall")
     public List<SeSitueA> getAllSeSitueA() {
         return seSitueAService.findAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("getid/{id}")
     public SeSitueA getSeSitueAById(@PathVariable Long id) {
         return seSitueAService.findById(id);
     }
@@ -29,7 +29,7 @@ public class SeSitueAController {
         return seSitueAService.save(seSitueA);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("update/{id}")
     public SeSitueA updateSeSitueA(@PathVariable Long id, @RequestBody SeSitueA updatedSeSitueA) {
         SeSitueA seSitueA = seSitueAService.findById(id);
         if (seSitueA != null) {
@@ -41,7 +41,7 @@ public class SeSitueAController {
         return null;
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("delete/{id}")
     public void deleteSeSitueA(@PathVariable Long id) {
         seSitueAService.deleteById(id);
     }
